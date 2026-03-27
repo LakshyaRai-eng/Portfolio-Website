@@ -4,9 +4,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit
 }
 
-Write-Host "Creating initialization file to reset password to 'Lakshya123'..."
+Write-Host "Creating initialization file to reset password to 'lakshya123'..."
 $initPath = "C:\mysql-init.txt"
-"ALTER USER 'root'@'localhost' IDENTIFIED BY 'Lakshya123';" | Out-File -FilePath $initPath -Encoding ascii
+"ALTER USER 'root'@'localhost' IDENTIFIED BY 'lakshya123';" | Out-File -FilePath $initPath -Encoding ascii
 
 Write-Host "Stopping MySQL service..."
 Stop-Service -Name MySQL80 -Force -ErrorAction SilentlyContinue
@@ -43,5 +43,5 @@ Write-Host "Restarting MySQL Service..."
 Start-Service -Name MySQL80
 
 Write-Host "============================================="
-Write-Host " SUCCESS: Password reset to 'Lakshya123'     "
+Write-Host " SUCCESS: Password reset to 'lakshya123'     "
 Write-Host "============================================="

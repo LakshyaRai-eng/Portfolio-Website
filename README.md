@@ -18,9 +18,9 @@ Just double-click the **`start_server.bat`** file in this folder. It will bypass
 ### 2. Fixing Database Connection Error
 If the server starts but you see an "Access denied for user 'root'" error in the terminal:
 - Right-click on **`reset_mysql.ps1`** and select **Run with PowerShell** as **Administrator**.
-- This script will reset your root MySQL password to `Lakshya123` so the Node server can connect.
+- This script will reset your root MySQL password to `lakshya123` so the Node server can connect.
 - After resetting, you also need to set up the database by running:
-  `mysql -u root -pLakshya123 < setup_db.sql`
+  `mysql -u root -plakshya123 < setup_db.sql`
 
 ## Tech Stack
 - Frontend: HTML, CSS, JS
