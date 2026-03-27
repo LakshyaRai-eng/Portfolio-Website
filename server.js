@@ -64,7 +64,8 @@ app.post('/api/contact', (req, res) => {
 
         // Send email notification
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"${name}" <${process.env.EMAIL_USER}>`,
+            replyTo: email,
             to: process.env.RECEIVER_EMAIL || process.env.EMAIL_USER,
             subject: `New Contact Request from ${name}`,
             text: `You have received a new message from your portfolio contact form.\n\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`
